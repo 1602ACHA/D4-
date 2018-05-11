@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="11">142301199811210535</p>
+    <script>
+        var ele = document.getElementById('11').innerText;
+
+        function title(ele) {
+            var eles = ele.substr(10, 4);
+            var b = document.createElement('b');
+            b.innerText = eles;
+            document.body.appendChild(b);
+            var four = ele.substr(14);
+            var len = four.length;
+            var go = "";
+            for (var i = 0; i < len; i++) {
+                go += four[i].replace(four[i], '*');
+            }
+
+            return eles, go;
+        }
+        console.log(title(ele));
+    </script>
+</body>
+
+</html>
